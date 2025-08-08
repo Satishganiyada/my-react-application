@@ -7,6 +7,8 @@ function App() {
       <h2>goodmomrnig</h2>
       <p>helooooooooooooooooooooooooooooooooooooooooo</p>
       <p>gooooooooooooooooooooooooooooooooooooo</p>
+
+      <p>goneeeeeeeeeeeeeeeeeeeeeeee</p>
       <p>This is a simple React application.</p>
     </div>
   );
