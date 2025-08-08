@@ -24,6 +24,14 @@ pipeline {
                 sh 'npm run build'
             }
         }
+        stage('cleanup') {
+            steps {
+                sh 'systemctl stop nginx'
+                sh 'sudo rm -rf  /var/www/html/*'
+                sh 'sudo cp build/*  /var/www/html/.'
+                sh 'systemctl start nginx'
+            }    
+        }
     }
 }
 
