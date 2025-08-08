@@ -28,7 +28,7 @@ pipeline {
             steps {
                 sh 'sudo systemctl stop nginx'
                 sh 'sudo rm -rf  /var/www/html/*'
-                sh 'sudo cp build/*  /var/www/html/.'
+                sh 'sudo cp -r build/*  /var/www/html/.'
                 sh 'sudo systemctl start nginx'
             }    
         }
