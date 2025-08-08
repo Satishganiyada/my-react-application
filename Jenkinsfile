@@ -26,10 +26,10 @@ pipeline {
         }
         stage('cleanup') {
             steps {
-                sh 'systemctl stop nginx'
+                sh 'sudo systemctl stop nginx'
                 sh 'sudo rm -rf  /var/www/html/*'
                 sh 'sudo cp build/*  /var/www/html/.'
-                sh 'systemctl start nginx'
+                sh 'sudo systemctl start nginx'
             }    
         }
     }
